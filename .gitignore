@@ -1,0 +1,22 @@
+# Large data files
+data/train_fraud_labels.json
+data/user_merchant_matrix.csv
+data/preprocessed_transactions.csv
+data/transactions_data.csv
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
