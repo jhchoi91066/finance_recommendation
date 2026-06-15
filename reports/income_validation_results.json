@@ -1,0 +1,13 @@
+{
+  "random_cv": 0.5616,
+  "distribution_shift": {
+    "low_spend→high_spend": 0.1377,
+    "high_spend→low_spend": 0.0549,
+    "young→old": 0.4674,
+    "old→young": 0.1458,
+    "west→east": 0.571,
+    "east→west": 0.4241
+  },
+  "ablation_drop_top3": 0.5068,
+  "verdict": "일부 분포 이동에서 성능이 약화/붕괴 → 모집단 특이적 신호 존재(정직한 한계)"
+}

@@ -1,0 +1,64 @@
+{
+  "n_loans": 1306387,
+  "default_rate_pct": 20.09,
+  "model_leaky": {
+    "roc_auc": 0.9998,
+    "pr_auc": 0.9998,
+    "n_features": 22
+  },
+  "model_app_only": {
+    "roc_auc": 0.701,
+    "pr_auc": 0.3735,
+    "n_features": 14
+  },
+  "model_app_plus_lc": {
+    "roc_auc": 0.7044,
+    "pr_auc": 0.3779,
+    "n_features": 17
+  },
+  "baseline_auc": 0.5,
+  "operating_points": {
+    "approve_90pct": {
+      "accepted_default_rate_pct": 19.13,
+      "vs_overall": 0.88
+    },
+    "approve_80pct": {
+      "accepted_default_rate_pct": 17.15,
+      "vs_overall": 0.79
+    },
+    "approve_70pct": {
+      "accepted_default_rate_pct": 15.31,
+      "vs_overall": 0.71
+    }
+  },
+  "income_band_default": {
+    "저소득": {
+      "default_rate_pct": 25.48,
+      "n": 67682
+    },
+    "중하": {
+      "default_rate_pct": 22.18,
+      "n": 64130
+    },
+    "중상": {
+      "default_rate_pct": 20.46,
+      "n": 65591
+    },
+    "고소득": {
+      "default_rate_pct": 18.3,
+      "n": 63875
+    }
+  },
+  "top_features_app": {
+    "installment": 4830,
+    "loan_amnt": 3945,
+    "revol_util": 2627,
+    "annual_inc": 2464,
+    "dti": 2376,
+    "addr_state": 1882,
+    "total_acc": 1753,
+    "open_acc": 1402,
+    "purpose": 1169,
+    "emp_years": 939
+  }
+}

@@ -4,6 +4,9 @@ data/user_merchant_matrix.csv
 data/preprocessed_transactions.csv
 data/transactions_data.csv
 
+# Lending Club real dataset (1.2GB) — 받기: kaggle datasets download -d adarshsng/lending-club-loan-data-csv -p data_lending --unzip
+data_lending/
+
 # Virtual environment
 venv/
 

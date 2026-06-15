@@ -1,0 +1,109 @@
+{
+  "data": {
+    "split": "random",
+    "n_total": 8914963,
+    "n_train": 6240474,
+    "n_test": 1782993,
+    "fraud_rate_overall_pct": 0.1495,
+    "test_period": "2010-01-01~2019-10-31"
+  },
+  "logistic_regression": {
+    "roc_auc": 0.9352,
+    "pr_auc": 0.033
+  },
+  "lightgbm": {
+    "roc_auc": 0.898,
+    "pr_auc": 0.0444,
+    "pr_auc_lift_vs_random": 29.0,
+    "operating_points": {
+      "top_0.1pct": {
+        "flagged": 1782,
+        "recall": 0.026,
+        "precision": 0.0398,
+        "lift_vs_random": 26.0
+      },
+      "top_0.5pct": {
+        "flagged": 8914,
+        "recall": 0.1216,
+        "precision": 0.0372,
+        "lift_vs_random": 24.3
+      },
+      "top_1.0pct": {
+        "flagged": 17829,
+        "recall": 0.2784,
+        "precision": 0.0426,
+        "lift_vs_random": 27.8
+      }
+    },
+    "confusion@0.5pct": {
+      "tp": 332,
+      "fp": 8582,
+      "fn": 2398,
+      "tn": 1771681
+    }
+  },
+  "business": {
+    "fraud_amount_total": 361678.02,
+    "fraud_amount_caught": 88382.12,
+    "fraud_amount_missed": 273295.9,
+    "loss_reduction_pct": 24.44,
+    "flagged_count": 8914,
+    "flagged_rate_pct": 0.5,
+    "false_positive_count": 8582
+  },
+  "segment_risk": {
+    "baseline_fraud_rate_pct": 0.1531,
+    "segments": {
+      "online": {
+        "label": "온라인 거래",
+        "fraud_rate_pct": 0.865,
+        "lift_vs_baseline": 5.65,
+        "n": 208899
+      },
+      "in_person": {
+        "label": "대면 거래",
+        "fraud_rate_pct": 0.0586,
+        "lift_vs_baseline": 0.38,
+        "n": 1574094
+      },
+      "night": {
+        "label": "야간(22~6시) 거래",
+        "fraud_rate_pct": 0.0681,
+        "lift_vs_baseline": 0.44,
+        "n": 180625
+      },
+      "weekend": {
+        "label": "주말 거래",
+        "fraud_rate_pct": 0.1638,
+        "lift_vs_baseline": 1.07,
+        "n": 510230
+      },
+      "amount_gt_3x_user_mean": {
+        "label": "평소 평균의 3배 이상 고액",
+        "fraud_rate_pct": 0.9597,
+        "lift_vs_baseline": 6.27,
+        "n": 76798
+      },
+      "has_error": {
+        "label": "거래오류 동반",
+        "fraud_rate_pct": 0.4502,
+        "lift_vs_baseline": 2.94,
+        "n": 28430
+      }
+    }
+  },
+  "top_features": {
+    "mcc": 2239,
+    "merchant_freq": 2135,
+    "hour": 1727,
+    "sec_since_prev": 1563,
+    "amount": 1426,
+    "amount_vs_credit_limit": 1014,
+    "amount_vs_user_mean": 915,
+    "card_txn_seq": 856,
+    "credit_limit": 783,
+    "credit_score": 572,
+    "current_age": 541,
+    "yearly_income": 529
+  }
+}

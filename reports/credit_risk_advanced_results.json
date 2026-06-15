@@ -1,0 +1,73 @@
+{
+  "n_loans": 1306387,
+  "default_rate_pct": 20.09,
+  "v1_reference_auc": 0.701,
+  "ablation": {
+    "M0_v1재현": {
+      "roc_auc": 0.6981,
+      "pr_auc": 0.37
+    },
+    "M1_+피처엔지니어링": {
+      "roc_auc": 0.6995,
+      "pr_auc": 0.3718
+    },
+    "M2_+네이티브범주형": {
+      "roc_auc": 0.7011,
+      "pr_auc": 0.3739
+    },
+    "M3_+튜닝(최종)": {
+      "roc_auc": 0.7018,
+      "pr_auc": 0.3747
+    }
+  },
+  "best_params": {
+    "num_leaves": 31,
+    "learning_rate": 0.05,
+    "min_child_samples": 20,
+    "subsample": 0.9,
+    "colsample_bytree": 0.7,
+    "reg_lambda": 5.0,
+    "n_estimators": 1500
+  },
+  "calibration": {
+    "brier_raw": 0.15624,
+    "brier_cal": 0.15815,
+    "ece_raw": 0.0271,
+    "ece_cal": 0.0493
+  },
+  "logistic_vs_lgbm": {
+    "logistic_auc": 0.6918,
+    "lgbm_auc": 0.7018,
+    "gap": 0.01
+  },
+  "logistic_reason_codes": {
+    "risk_up": {
+      "term_months": 1.2,
+      "inst_to_loan": 0.894,
+      "loan_to_income": 0.232,
+      "log_loan": 0.216,
+      "dti": 0.138
+    },
+    "risk_down": {
+      "pay_to_income": -0.249,
+      "log_income": -0.199,
+      "loan_amnt": -0.198,
+      "home_ownership_MORTGAGE": -0.071,
+      "emp_years": -0.037
+    }
+  },
+  "rolling_validation": {
+    "per_year": {
+      "2014": 0.7077,
+      "2015": 0.7303,
+      "2016": 0.709
+    },
+    "mean": 0.7157,
+    "std": 0.0104
+  },
+  "summary": {
+    "v1_auc": 0.6981,
+    "final_auc": 0.7018,
+    "improvement": 0.0037
+  }
+}

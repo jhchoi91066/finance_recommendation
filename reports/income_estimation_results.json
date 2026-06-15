@@ -1,0 +1,79 @@
+{
+  "n_users": 1219,
+  "n_features": 26,
+  "mean_only": {
+    "r2": -0.0015,
+    "r2_ci95": [
+      -0.0065,
+      -0.0006
+    ],
+    "median_abs_err_usd": 9478.0,
+    "within_20pct": 0.4167
+  },
+  "total_spend_only": {
+    "r2": 0.1704,
+    "r2_ci95": [
+      0.0329,
+      0.2541
+    ],
+    "median_abs_err_usd": 9329.0,
+    "within_20pct": 0.4389
+  },
+  "full_behavioral": {
+    "r2": 0.5616,
+    "r2_ci95": [
+      0.4614,
+      0.6165
+    ],
+    "median_abs_err_usd": 7076.0,
+    "within_20pct": 0.5472
+  },
+  "high_earner_auc": 0.8918,
+  "top_features": {
+    "std_amt": 0.2019,
+    "n_states": 0.1778,
+    "merchants_per_year": 0.176,
+    "spend_per_year": 0.1629,
+    "total_spend": 0.0895,
+    "n_merchants": 0.0596,
+    "share_travel": 0.047,
+    "n_mcc": 0.0415,
+    "share_entertainment": 0.0314,
+    "share_dining": 0.0255,
+    "p90_amt": 0.0231,
+    "share_utilities": 0.0214
+  },
+  "segment_bias": {
+    "gender:Female": {
+      "median_bias_usd": -187.0,
+      "n": 622
+    },
+    "gender:Male": {
+      "median_bias_usd": -1551.0,
+      "n": 597
+    },
+    "age_band:~35": {
+      "median_bias_usd": -3033.0,
+      "n": 162
+    },
+    "age_band:35-50": {
+      "median_bias_usd": -2542.0,
+      "n": 428
+    },
+    "age_band:50-65": {
+      "median_bias_usd": -933.0,
+      "n": 377
+    },
+    "age_band:65+": {
+      "median_bias_usd": 4298.0,
+      "n": 252
+    }
+  },
+  "thin_file_r2": {
+    "first_25_tx": 0.0184,
+    "first_50_tx": -0.0203,
+    "first_100_tx": 0.0825,
+    "first_300_tx": 0.0925,
+    "first_1000_tx": 0.1867
+  }
+}

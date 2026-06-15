@@ -1,0 +1,5 @@
+# 서빙(API) 전용 최소 의존성 — 컨테이너 이미지를 가볍게 유지
+fastapi>=0.110
+uvicorn[standard]>=0.29
+lightgbm>=4.0.0
+numpy>=1.21.0

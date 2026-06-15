@@ -1,0 +1,72 @@
+{
+  "feature_order": [
+    "loan_amnt",
+    "annual_inc",
+    "dti",
+    "open_acc",
+    "revol_util",
+    "total_acc",
+    "installment",
+    "term_months",
+    "emp_years",
+    "loan_to_income",
+    "pay_to_income",
+    "inst_to_loan",
+    "home_ownership_code",
+    "purpose_code"
+  ],
+  "cat_maps": {
+    "home_ownership": [
+      "ANY",
+      "MORTGAGE",
+      "NONE",
+      "OTHER",
+      "OWN",
+      "RENT"
+    ],
+    "purpose": [
+      "car",
+      "credit_card",
+      "debt_consolidation",
+      "educational",
+      "home_improvement",
+      "house",
+      "major_purchase",
+      "medical",
+      "moving",
+      "other",
+      "renewable_energy",
+      "small_business",
+      "vacation",
+      "wedding"
+    ]
+  },
+  "score": {
+    "pdo": 20,
+    "base": 600,
+    "base_odds": 20
+  },
+  "thresholds": {
+    "approve_below": 0.2,
+    "reject_above": 0.35
+  },
+  "default_rate": 0.2009,
+  "validation_auc": 0.6978,
+  "n_train": 1306387,
+  "feature_labels": {
+    "loan_amnt": "대출 금액",
+    "annual_inc": "연소득",
+    "dti": "부채/소득비(DTI)",
+    "open_acc": "활성 계좌 수",
+    "revol_util": "신용 회전율",
+    "total_acc": "총 계좌 수",
+    "installment": "월 상환액",
+    "term_months": "대출 기간(개월)",
+    "emp_years": "근속연수",
+    "loan_to_income": "소득대비 대출액",
+    "pay_to_income": "상환부담률",
+    "inst_to_loan": "상환액/대출액 비율",
+    "home_ownership_code": "주거 형태",
+    "purpose_code": "대출 목적"
+  }
+}
